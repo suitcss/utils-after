@@ -1,7 +1,5 @@
 /** @define Test */
 
-/*! suitcss-components-test v0.1.1 | MIT License | github.com/suitcss */
-
 /**
  * The 'describe' CSS counter
  */
@@ -10,7 +8,7 @@
   counter-reset: test-describe;
 }
 
-.Test-describe:before {
+.Test-describe::before {
   content: counter(test-describe);
   counter-increment: test-describe;
 }
@@ -23,7 +21,7 @@
   counter-reset: test-it;
 }
 
-.Test-it:before {
+.Test-it::before {
   content: counter(test-describe) "." counter(test-it);
   counter-increment: test-it;
 }
@@ -33,12 +31,12 @@
  */
 
 .Test-title {
-  font-size: 2em;
-  font-family: sans-serif;
-  padding: 20px;
-  margin: 20px 0;
   background: #eee;
   color: #999;
+  font-family: sans-serif;
+  font-size: 2em;
+  margin: 20px 0;
+  padding: 20px;
 }
 
 /**
@@ -65,8 +63,8 @@
  * The counter styles
  */
 
-.Test-describe:before,
-.Test-it:before {
+.Test-describe::before,
+.Test-it::before {
   color: #999;
   display: inline-block;
   margin-right: 10px;
@@ -75,13 +73,14 @@
 }
 
 /**
+ * @define utilities
  * Specify the proportional offset after an element.
  * Intentional redundancy build into each set of unit classes.
  * Supports: 2, 4, 5, 6, 8, 10, 12 section
  */
 
 .u-after1of12 {
-  margin-right: 8.333333333333332% !important;
+  margin-right: 8.33333% !important;
 }
 
 .u-after1of10 {
@@ -94,7 +93,7 @@
 
 .u-after1of6,
 .u-after2of12 {
-  margin-right: 16.666666666666664% !important;
+  margin-right: 16.66667% !important;
 }
 
 .u-after1of5,
@@ -115,7 +114,7 @@
 .u-after1of3,
 .u-after2of6,
 .u-after4of12 {
-  margin-right: 33.33333333333333% !important;
+  margin-right: 33.33333% !important;
 }
 
 .u-after3of8 {
@@ -128,7 +127,7 @@
 }
 
 .u-after5of12 {
-  margin-right: 41.66666666666667% !important;
+  margin-right: 41.66667% !important;
 }
 
 .u-after1of2,
@@ -141,7 +140,7 @@
 }
 
 .u-after7of12 {
-  margin-right: 58.333333333333336% !important;
+  margin-right: 58.33333% !important;
 }
 
 .u-after3of5,
@@ -156,7 +155,7 @@
 .u-after2of3,
 .u-after4of6,
 .u-after8of12 {
-  margin-right: 66.66666666666666% !important;
+  margin-right: 66.66667% !important;
 }
 
 .u-after7of10 {
@@ -176,7 +175,7 @@
 
 .u-after5of6,
 .u-after10of12 {
-  margin-right: 83.33333333333334% !important;
+  margin-right: 83.33333% !important;
 }
 
 .u-after7of8 {
@@ -188,10 +187,11 @@
 }
 
 .u-after11of12 {
-  margin-right: 91.66666666666666% !important;
+  margin-right: 91.66667% !important;
 }
 
 /**
+ * @define utilities
  * Offset: breakpoint 1 (small)
  *
  * Specify the proportional offset after an element.
@@ -200,12 +200,13 @@
  */
 
 @media (min-width:320px) and (max-width:640px) {
+
   .u-sm-afterNone {
-    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .u-sm-after1of12 {
-    margin-right: 8.333333333333332% !important;
+    margin-right: 8.33333% !important;
   }
 
   .u-sm-after1of10 {
@@ -218,7 +219,7 @@
 
   .u-sm-after1of6,
   .u-sm-after2of12 {
-    margin-right: 16.666666666666664% !important;
+    margin-right: 16.66667% !important;
   }
 
   .u-sm-after1of5,
@@ -239,7 +240,7 @@
   .u-sm-after1of3,
   .u-sm-after2of6,
   .u-sm-after4of12 {
-    margin-right: 33.33333333333333% !important;
+    margin-right: 33.33333% !important;
   }
 
   .u-sm-after3of8 {
@@ -252,7 +253,7 @@
   }
 
   .u-sm-after5of12 {
-    margin-right: 41.66666666666667% !important;
+    margin-right: 41.66667% !important;
   }
 
   .u-sm-after1of2,
@@ -265,7 +266,7 @@
   }
 
   .u-sm-after7of12 {
-    margin-right: 58.333333333333336% !important;
+    margin-right: 58.33333% !important;
   }
 
   .u-sm-after3of5,
@@ -280,7 +281,7 @@
   .u-sm-after2of3,
   .u-sm-after4of6,
   .u-sm-after8of12 {
-    margin-right: 66.66666666666666% !important;
+    margin-right: 66.66667% !important;
   }
 
   .u-sm-after7of10 {
@@ -300,7 +301,7 @@
 
   .u-sm-after5of6,
   .u-sm-after10of12 {
-    margin-right: 83.33333333333334% !important;
+    margin-right: 83.33333% !important;
   }
 
   .u-sm-after7of8 {
@@ -312,11 +313,13 @@
   }
 
   .u-sm-after11of12 {
-    margin-right: 91.66666666666666% !important;
+    margin-right: 91.66667% !important;
   }
+
 }
 
 /**
+ * @define utilities
  * Offset: breakpoint 2 (medium)
  *
  * Specify the proportional offset after an element.
@@ -325,12 +328,13 @@
  */
 
 @media (min-width:640px) and (max-width:960px) {
+
   .u-md-afterNone {
-    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .u-md-after1of12 {
-    margin-right: 8.333333333333332% !important;
+    margin-right: 8.33333% !important;
   }
 
   .u-md-after1of10 {
@@ -343,7 +347,7 @@
 
   .u-md-after1of6,
   .u-md-after2of12 {
-    margin-right: 16.666666666666664% !important;
+    margin-right: 16.66667% !important;
   }
 
   .u-md-after1of5,
@@ -364,7 +368,7 @@
   .u-md-after1of3,
   .u-md-after2of6,
   .u-md-after4of12 {
-    margin-right: 33.33333333333333% !important;
+    margin-right: 33.33333% !important;
   }
 
   .u-md-after3of8 {
@@ -377,7 +381,7 @@
   }
 
   .u-md-after5of12 {
-    margin-right: 41.66666666666667% !important;
+    margin-right: 41.66667% !important;
   }
 
   .u-md-after1of2,
@@ -390,7 +394,7 @@
   }
 
   .u-md-after7of12 {
-    margin-right: 58.333333333333336% !important;
+    margin-right: 58.33333% !important;
   }
 
   .u-md-after3of5,
@@ -405,7 +409,7 @@
   .u-md-after2of3,
   .u-md-after4of6,
   .u-md-after8of12 {
-    margin-right: 66.66666666666666% !important;
+    margin-right: 66.66667% !important;
   }
 
   .u-md-after7of10 {
@@ -425,7 +429,7 @@
 
   .u-md-after5of6,
   .u-md-after10of12 {
-    margin-right: 83.33333333333334% !important;
+    margin-right: 83.33333% !important;
   }
 
   .u-md-after7of8 {
@@ -437,11 +441,13 @@
   }
 
   .u-md-after11of12 {
-    margin-right: 91.66666666666666% !important;
+    margin-right: 91.66667% !important;
   }
+
 }
 
 /**
+ * @define utilities
  * Offset: breakpoint 3 (large)
  *
  * Specify the proportional offset after an element.
@@ -450,12 +456,13 @@
  */
 
 @media (min-width:960px) {
+
   .u-lg-afterNone {
-    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .u-lg-after1of12 {
-    margin-right: 8.333333333333332% !important;
+    margin-right: 8.33333% !important;
   }
 
   .u-lg-after1of10 {
@@ -468,7 +475,7 @@
 
   .u-lg-after1of6,
   .u-lg-after2of12 {
-    margin-right: 16.666666666666664% !important;
+    margin-right: 16.66667% !important;
   }
 
   .u-lg-after1of5,
@@ -489,7 +496,7 @@
   .u-lg-after1of3,
   .u-lg-after2of6,
   .u-lg-after4of12 {
-    margin-right: 33.33333333333333% !important;
+    margin-right: 33.33333% !important;
   }
 
   .u-lg-after3of8 {
@@ -502,7 +509,7 @@
   }
 
   .u-lg-after5of12 {
-    margin-right: 41.66666666666667% !important;
+    margin-right: 41.66667% !important;
   }
 
   .u-lg-after1of2,
@@ -515,7 +522,7 @@
   }
 
   .u-lg-after7of12 {
-    margin-right: 58.333333333333336% !important;
+    margin-right: 58.33333% !important;
   }
 
   .u-lg-after3of5,
@@ -530,7 +537,7 @@
   .u-lg-after2of3,
   .u-lg-after4of6,
   .u-lg-after8of12 {
-    margin-right: 66.66666666666666% !important;
+    margin-right: 66.66667% !important;
   }
 
   .u-lg-after7of10 {
@@ -550,7 +557,7 @@
 
   .u-lg-after5of6,
   .u-lg-after10of12 {
-    margin-right: 83.33333333333334% !important;
+    margin-right: 83.33333% !important;
   }
 
   .u-lg-after7of8 {
@@ -562,6 +569,8 @@
   }
 
   .u-lg-after11of12 {
-    margin-right: 91.66666666666666% !important;
+    margin-right: 91.66667% !important;
   }
+
 }
+
